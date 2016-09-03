@@ -14,6 +14,7 @@ class BengaliPhoneticParserTests: XCTestCase {
       XCTAssertEqual(converter.isVowel("b"), false)
       XCTAssertEqual(converter.isConsonant("M"), true)
       XCTAssertEqual(converter.isConsonant("o"), false)
+      XCTAssertEqual(converter.fixString("ODEr AMAr"), "ODer amar")
     } catch let error as NSError {
       print("Failed to load: \(error.localizedDescription)")
     }
