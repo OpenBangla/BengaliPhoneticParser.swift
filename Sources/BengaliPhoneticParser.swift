@@ -49,11 +49,11 @@ struct BengaliPhoneticParser {
   }
 
   func isVowel(_ c: Character) -> Bool {
-    return vowel.contains(String(c))
+    return vowel.contains(String(c).lowercased())
   }
 
   func isConsonant(_ c: Character) -> Bool {
-    return consonant.contains(String(c))
+    return consonant.contains(String(c).lowercased())
   }
 
   func isNumber(_ c: Character) -> Bool {
@@ -61,6 +61,6 @@ struct BengaliPhoneticParser {
   }
 
   func isCaseSensitive(_ c: Character) -> Bool {
-    return caseSensitive.contains(String(c))
+    return caseSensitive.contains(String(c).lowercased())
   }
 }

@@ -10,9 +10,9 @@ class BengaliPhoneticParserTests: XCTestCase {
   func testHelperFunctions() {
     do {
       let converter = try BengaliPhoneticParser(withGrammer: getGrammerPath())
-      XCTAssertEqual(converter.isVowel("a"), true)
+      XCTAssertEqual(converter.isVowel("A"), true)
       XCTAssertEqual(converter.isVowel("b"), false)
-      XCTAssertEqual(converter.isConsonant("m"), true)
+      XCTAssertEqual(converter.isConsonant("M"), true)
       XCTAssertEqual(converter.isConsonant("o"), false)
     } catch let error as NSError {
       print("Failed to load: \(error.localizedDescription)")
